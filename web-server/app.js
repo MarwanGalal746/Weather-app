@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const app = express();
+const weather = require('./src/getWeather')
 
 
 //define paths for config express
@@ -15,7 +16,7 @@ const partialsPath = path.join(__dirname, 'templates/partials')
 app.set('view engine', 'hbs');
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath);
-
+app.use(express.static(publicFileDirectory))
 
 
 app.get('' , (req, res) => {
@@ -25,7 +26,7 @@ app.get('' , (req, res) => {
     })
 })
 
-app.use(express.static(publicFileDirectory))
+
 
 app.get('/help', (req, res) => {
     res.render('help', {
@@ -51,6 +52,21 @@ app.get('/about' , (req,res) => {
     });
 })
 
+app.get('/weather' , (req,res) => {
+    if(!req.query.address){
+        return res.send({
+            error: 'You must provide an address'
+        })
+    }
+    weather(req.query.address, (error, response) => {
+        if(error){
+            res.send({error})
+        } else {
+            res.send({response})
+        }
+    })
+})
+
 app.get('*', (req, res) => {
     res.render('404', {
         title: "404",
@@ -60,12 +76,7 @@ app.get('*', (req, res) => {
 })
 
 
-app.get('/weather' , (req,res) => {
-    res.send({
-        location: 'cairo', 
-        forcast: 'good'
-    });
-})
+
 
 
 app.listen(3000, () => {
