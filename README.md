@@ -29,7 +29,7 @@
 >
 > ![](./web-server/public/img/keys.png)
 >
-> Then you will edit the line 4 in [getWeathr.js](./web-server/src/getWeather.js) as shown in the next line:
+> Then you will edit line 4 in [getWeathr.js](./web-server/src/getWeather.js) as shown in the next line:
 >
 > ` const API_KEY='a656sdf6545zxcv6df8685'     //This is a fake key, you will assign your own key which you copied it from the site  `
 >
