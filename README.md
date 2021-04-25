@@ -41,6 +41,6 @@
 >
 > `$ nodemon app.js`
 >
-> Then go to browser and and visit this [link](http://localhost:3000) and enjoy. 
+> Then visit this [link](http://localhost:3000) and enjoy. 
 
 ## 
