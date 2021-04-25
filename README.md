@@ -23,15 +23,15 @@
 
 > At first, you need to register on [Open weathr map](https://openweathermap.org/) , then go to the [home page](https://home.openweathermap.org/) and choose API keys as shown in the following picture:
 >
-> ![](./web-server/public/img/API keys.png)
+> ![](./web-server/public/img/API%20keys.png)
 >
 > Then you will copy the API key as shown in the following picture: 
 >
 > ![](./web-server/public/img/keys.png)
 >
-> Then you will edit the line 4 in [getWeathr.js](./web-server/src) as shown in the next line:
+> Then you will edit the line 4 in [getWeathr.js](./web-server/src/getWeather.js) as shown in the next line:
 >
-> ` const API_KEY='a656sdf6545zxcv6df8685'     //This is a fake key, yo will assign your own key which you copied it from the site  `
+> ` const API_KEY='a656sdf6545zxcv6df8685'     //This is a fake key, you will assign your own key which you copied it from the site  `
 >
 > Then you will go to terminal and change directory to the directory of the repository and type the following commands:
 >
