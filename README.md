@@ -39,7 +39,7 @@
 >
 > `$ npm install`
 >
-> `$ nodemon app.js`
+> `$ node app.js`
 >
 > Then visit this [link](http://localhost:3000) and enjoy. 
 
